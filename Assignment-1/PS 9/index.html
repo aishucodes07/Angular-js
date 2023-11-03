@@ -1,0 +1,52 @@
+<!-- PS9 Validation with Regular Expressions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Validation</title>
+    <style>
+         fieldset{ 
+            width: 250px;
+            margin: auto auto;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        input:focus{
+            box-shadow: 0px 0px 10px rgb(106, 166, 194);
+        }
+        label{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <div>
+            
+                <label for="password">Password</label><br>
+                <input autofocus required type="password" id="password" name="password" autocomplete="off" placeholder="8-12 characters"
+                    pattern="^(?=.{8,})(?=.[a-z])(?=.[A-Z])(?=.*[\d])(?=.*[\W]).*$" title="Password must be 8 or more characters
+                    with at least one number, an uppercase letter, and one special character">
+                <br>
+            
+            
+           
+                <label for="cnfpsd">Confirm Password</label><br>
+                <input autofocus required type="password" id="cnfpsd" name="cnfpsd" autocomplete="off" placeholder="Confirm Password"
+                    pattern="^(?=.{8,})(?=.[a-z])(?=.[A-Z])(?=.*[\d])(?=.*[\W]).*$" title="Password must be 8 or more characters
+                    with at least one number, an uppercase letter, and one special character">
+                <br><br>
+                <div class="buttons">
+
+                    <button type="submit" autofocus id="sbt">Sign Up</button>
+                </div>
+            
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
